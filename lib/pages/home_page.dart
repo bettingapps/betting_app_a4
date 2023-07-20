@@ -17,19 +17,22 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
+        height: MediaQuery.of(context).size.height,
         decoration: Styles.boxWithGradient,
+        alignment: Alignment.center,
         child: SafeArea(
             child: SingleChildScrollView(
           child: Column(
             children: [
               SizedBox(height: 40),
-              Image.asset('assets/images/logo.png'),
-              SizedBox(height: 30),
+              // // Image.asset('assets/images/logo.png'),
+              // SizedBox(height: 30),
               ConstrainedBox(
                 constraints: BoxConstraints(maxHeight: 500),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    SizedBox(height: 40),
                     HomeButton(
                         title: 'Fights', function: () => Get.to(FightsPage())),
                     HomeButton(
